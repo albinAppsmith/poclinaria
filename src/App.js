@@ -4,7 +4,6 @@ import Button from './Button';
 
 function App() {
   const [samples, setSamples] = useState(1);
-  const [component, setComponent] = useState('Button');
   const [key, setKey] = useState(1);
   const [componentProps, setComponentProps] = useState({
     size: 'medium',
