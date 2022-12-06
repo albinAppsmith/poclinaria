@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import Button from './Button';
+import ButtonTwo from './ButtonTwo';
 
 function App() {
-  const [samples, setSamples] = useState(1);
+  const [buttonTwos, setButtonTwos] = useState([]);
   const [key, setKey] = useState(1);
   const [componentProps, setComponentProps] = useState({
     size: 'medium',
@@ -37,24 +38,37 @@ function App() {
     });
   };
 
+  const addFiveButtonTwo = () => {
+    const buttonTwoProps = {
+      size: 'large',
+      category: 'secondary',
+      isDisabled: false,
+      icon: 'home',
+      iconPosition: 'right',
+      isLoading: false,
+      text: 'Hello World from Button #2'
+    };
+
+    setButtonTwos([
+      ...buttonTwos,
+      <ButtonTwo {...buttonTwoProps} />,
+      <ButtonTwo {...buttonTwoProps} />,
+      <ButtonTwo {...buttonTwoProps} />,
+      <ButtonTwo {...buttonTwoProps} />,
+      <ButtonTwo {...buttonTwoProps} />
+    ]);
+  };
+
   return (
     <>
       <div>
-        Samples:&nbsp;
-        <select
-          onChange={({ target }) => setSamples(parseInt(target.value))}
-          defaultValue={samples}
-        >
-          <option value="1">1</option>
-          <option value="10">10</option>
-          <option value="100">100</option>
-        </select>
-        &emsp;|&emsp;
         <button onClick={reRender}>Re-render</button>
         &emsp;|&emsp;
         <button onClick={updateOnePropAndReRender}>Update 1 prop and Re-render</button>
         &emsp;|&emsp;
         <button onClick={updateAllPropsAndReRender}>Update ALL props and Re-render</button>
+        &emsp;|&emsp;
+        <button onClick={addFiveButtonTwo}>Add 5 Button #2</button>
       </div>
       <hr />
 
@@ -159,6 +173,8 @@ function App() {
       <Button {...componentProps} />
       <Button {...componentProps} />
       <Button {...componentProps} />
+
+      {buttonTwos.map(item => item)}
     </>
   );
 }
