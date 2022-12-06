@@ -15,20 +15,6 @@ function App() {
     text: 'Hello World'
   });
 
-  const renderComponent = () => {
-    const componentToTest = <Button {...componentProps} />;
-
-    if (samples === 1) {
-      return componentToTest;
-    } else {
-      const components = [];
-      for (let i = 0; i < samples; i++) {
-        components.push(componentToTest);
-      }
-      return components;
-    }
-  };
-
   const reRender = () => {
     setKey(key + 1);
   };
@@ -72,7 +58,107 @@ function App() {
       </div>
       <hr />
 
-      {renderComponent()}
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
+      <Button {...componentProps} />
     </>
   );
 }
